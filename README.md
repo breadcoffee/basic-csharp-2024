@@ -275,7 +275,7 @@
 ## 4일차
 - 윈폼 UI 개발
     - Winforms로 윈폼 개발 학습
-    - 컨트롤 Prefix
+    - 컨트롤 Prefix(거의 영문자 3단어)
         - ComboBox : Cbo-
         - CheckBox : Chk-
         - RadioButton : Rdo-
@@ -287,17 +287,37 @@
         - ListView : Lsv-
         - PictureBox : Pic-
         - *Dialog : Dlg-
+        - RichTextBox : Rtx-
 
 ## 5일차
 - 윈폼 UI 개발(계속)
     - 스레드 추가
+        - 프로세스를 나누어서 동시에 여러가지 일을 진행
+        - 스레드 사용하기 불편함
+        - C# BackgroundWorker 클래스를 추가(Thread를 사용하기 편하게 만든 클래스)
+
     - 파일 입출력 추가
+        - 리치텍스트박스(like MSWord, 한글워드)로 파일저장
+
+        <img src="https://github.com/breadcoffee/basic-csharp-2024/blob/main/images/cs003.png" width="850">
+
     - 비동기 작업 앱
+        - 가장 트렌드가 되는 작업방법
+        - 백그라운드 처리는 Thread, BackgroundWorker와 유사
+        - async, await 키워드
+
+        ![비동기앱](https://github.com/breadcoffee/basic-csharp-2024/blob/main/images/cs004.png)
+
+## 6일차
+- 예제 프로젝트
     - 윈도우 탐색기 앱
     - 도서관리 앱 with SQL Server
     - ModernUI 앱
     - 국가교통정보센터 CCTV뷰 앱
     - IoT Dummy 앱 with SQL Server
 
-- WPF
-- 예제 프로젝트
+## 개인 포트폴리오
+- 제목
+    - 기능
+    - 특징
+    - 배운점
