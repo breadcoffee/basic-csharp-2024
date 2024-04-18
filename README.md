@@ -326,7 +326,7 @@
     - 국가교통정보센터 CCTV뷰 앱(OpenAPI, NuGet dll, Network)
     - IoT Dummy 앱 with SQL Server(IoT, DB)
 
-## 개인 포트폴리오
+## 토이 프로젝트
 - 제목
     - 기능
     - 특징
