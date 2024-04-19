@@ -323,8 +323,8 @@
     - 윈도우 탐색기 앱 종료
         - 실행결과
 
+        https://github.com/breadcoffee/basic-csharp-2024/assets/146920372/14ede7fe-78cc-4d3c-8abf-c5c824a1f594
 
-        
     - 도서관리 앱 with SQL Server(Base) ModernUI
 
 ## 8일차
