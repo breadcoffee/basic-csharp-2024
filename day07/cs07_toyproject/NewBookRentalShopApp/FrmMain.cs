@@ -17,6 +17,8 @@ namespace NewBookRentalShopApp
         FrmLoginUser frmLoginUser = null; // 객체를 메서드로 생성
         FrmBookDivision frmBookDivision = null; // 메소드 생성
         FrmBookInfo frmBookInfo = null; // 책정보 메소드 생성
+        FrmMember frmMember = null; // 회원정보 메소드 생성
+        FrmBookRental frmBookRental = null; // 대출관리 메소드 생성
 
         public FrmMain()
         {
@@ -30,6 +32,8 @@ namespace NewBookRentalShopApp
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.TopMost = true; // 실행 시 커서가 윈폼에 올라가게
             frm.ShowDialog();
+
+            LblLoginId.Text = Helper.Common.LoginId; // 메인창에 로그인된 아이디 표시
         }
 
         private void MnuLoginUsers_Click(object sender, EventArgs e)
@@ -50,6 +54,18 @@ namespace NewBookRentalShopApp
         {
             // 객체변수, 객체변수(객체변수는 소문자 시작), 클래스, 클래스(클래스는 대문자 시작)
             frmBookInfo = ShowActiveForm(frmBookInfo, typeof(FrmBookInfo)) as FrmBookInfo;
+        }
+
+        // 도서회원 관리 메뉴 클릭 이벤트핸들러
+        private void MnuMembers_Click(object sender, EventArgs e)
+        {
+            frmMember = ShowActiveForm(frmMember, typeof(FrmMember)) as FrmMember;
+        }
+
+        // 대출 관리 메뉴 클릭 이벤트핸들러
+        private void MnuBookRental_Click(object sender, EventArgs e)
+        {
+            frmBookRental = ShowActiveForm(frmBookRental, typeof(FrmBookRental)) as FrmBookRental;
         }
 
         Form ShowActiveForm(Form form, Type type)
@@ -78,5 +94,33 @@ namespace NewBookRentalShopApp
             return form;
         }
 
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var res = MessageBox.Show(this, "종료하시겠습니까?", "종료여부", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.No)
+            {
+                e.Cancel = true; // 종료 안되는 부분
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
+        }
+
+        private void MnuAbout_Click(object sender, EventArgs e)
+        {
+            FrmAbout popup = new FrmAbout();
+            popup.StartPosition = FormStartPosition.CenterParent;
+            popup.ShowDialog();
+        }
+
+        private void MnuExit_Click(object sender, EventArgs e)
+        {
+            var res = MessageBox.Show(this, "종료하시겠습니까?", "종료여부", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+        }
     }
 }

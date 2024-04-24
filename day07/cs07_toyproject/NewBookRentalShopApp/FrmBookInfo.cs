@@ -56,7 +56,7 @@ namespace NewBookRentalShopApp
                     CboDivision.SelectedIndex = -1;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
@@ -280,6 +280,15 @@ namespace NewBookRentalShopApp
                 TxtBookIdx.ReadOnly = true; // UPDATE시는 PK인 Division을 변경하면 안됨
 
                 isNew = false; // UPDATE 가능하게
+            }
+        }
+
+        // 숫자만 입력되도록 처리
+        private void TxtIsbn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

@@ -356,6 +356,8 @@
         - 대출 관리
         - 프로그램 소개
 
+        ![책대여프로그램](https://github.com/breadcoffee/basic-csharp-2024/blob/main/images/cs006.png)
+
 ## etc...
 - Pending
     - IoT Dummy 앱 with SQL Server(IoT, DB)

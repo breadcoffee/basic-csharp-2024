@@ -11,6 +11,15 @@ namespace NewBookRentalShopApp.Helper
                                     "Persist Security Info=True;" +
                                     "User ID=sa;Encrypt=False;Password=mssql_p@ss;";
 
+        // 로그인아이디
+        public static string LoginId { get; set; }
+
+        // 회원선택 팝업에서 대출화면으로 넘길 데이터 정적프로퍼티
+        public static string SelMemberIdx {  get; set; }
+        public static string SelMemberName { get; set; }
+        public static string SelBookIdx { get; set; }
+        public static string SelBookName { get; set; }
+
         // MD5 해시 알고리즘 암호화
         // 1234 --> 01011000 -> 110010100100110 -> x65xAEx11 처럼 변환
         public static string GetMd5Hash(MD5 md5Hash, string input)
