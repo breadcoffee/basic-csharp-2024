@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            BtnSeleteCancle = new Button();
+            BtnAllCancle = new Button();
+            BtnCard = new Button();
+            BtnCash = new Button();
             label5 = new Label();
-            TxtChagePrice = new TextBox();
+            TxtChangePrice = new TextBox();
             BtnBell7 = new Button();
             BtnBell9 = new Button();
             BtnBell8 = new Button();
@@ -40,9 +44,9 @@
             BtnBell1 = new Button();
             BtnBell3 = new Button();
             BtnBell2 = new Button();
-            TxtDrinkSum = new TextBox();
-            TxtDesertSum = new TextBox();
-            TxtTotalPrice = new TextBox();
+            TxtCount = new TextBox();
+            TxtTotal = new TextBox();
+            TxtPrice = new TextBox();
             TxtRecivePrice = new TextBox();
             BtnBell0 = new Button();
             BtnBellCE = new Button();
@@ -53,41 +57,50 @@
             label1 = new Label();
             TbcMenu = new TabControl();
             tabPage1 = new TabPage();
-            button10 = new Button();
-            button11 = new Button();
-            button12 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            BtnEinspannerIce = new Button();
+            BtnMochaIce = new Button();
+            BtnMochaHot = new Button();
+            BtnEinspannerHot = new Button();
+            BtnVanilaLatteIce = new Button();
+            BtnVanilaLatteHot = new Button();
+            BtnCappuccinoHot = new Button();
+            BtnLatteIce = new Button();
+            BtnLatteHot = new Button();
+            BtnEspresso = new Button();
+            BtnAmericanoIce = new Button();
+            BtnAmericanoHot = new Button();
             tabPage2 = new TabPage();
+            button17 = new Button();
+            button18 = new Button();
+            button19 = new Button();
+            button20 = new Button();
+            button21 = new Button();
+            button22 = new Button();
+            button23 = new Button();
+            button24 = new Button();
+            button25 = new Button();
+            button26 = new Button();
+            button27 = new Button();
+            button28 = new Button();
             LsvOrder = new ListView();
             ClhTitle = new ColumnHeader();
             ClhCount = new ColumnHeader();
             ClhPrice = new ColumnHeader();
             ClhEtc = new ColumnHeader();
-            button13 = new Button();
-            button14 = new Button();
-            button15 = new Button();
-            button16 = new Button();
             groupBox1.SuspendLayout();
             TbcMenu.SuspendLayout();
             tabPage1.SuspendLayout();
+            tabPage2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button16);
-            groupBox1.Controls.Add(button15);
-            groupBox1.Controls.Add(button14);
-            groupBox1.Controls.Add(button13);
+            groupBox1.Controls.Add(BtnSeleteCancle);
+            groupBox1.Controls.Add(BtnAllCancle);
+            groupBox1.Controls.Add(BtnCard);
+            groupBox1.Controls.Add(BtnCash);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(TxtChagePrice);
+            groupBox1.Controls.Add(TxtChangePrice);
             groupBox1.Controls.Add(BtnBell7);
             groupBox1.Controls.Add(BtnBell9);
             groupBox1.Controls.Add(BtnBell8);
@@ -97,9 +110,9 @@
             groupBox1.Controls.Add(BtnBell1);
             groupBox1.Controls.Add(BtnBell3);
             groupBox1.Controls.Add(BtnBell2);
-            groupBox1.Controls.Add(TxtDrinkSum);
-            groupBox1.Controls.Add(TxtDesertSum);
-            groupBox1.Controls.Add(TxtTotalPrice);
+            groupBox1.Controls.Add(TxtCount);
+            groupBox1.Controls.Add(TxtTotal);
+            groupBox1.Controls.Add(TxtPrice);
             groupBox1.Controls.Add(TxtRecivePrice);
             groupBox1.Controls.Add(BtnBell0);
             groupBox1.Controls.Add(BtnBellCE);
@@ -117,6 +130,46 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "주문관리";
             // 
+            // BtnSeleteCancle
+            // 
+            BtnSeleteCancle.Location = new Point(520, 356);
+            BtnSeleteCancle.Name = "BtnSeleteCancle";
+            BtnSeleteCancle.Size = new Size(82, 83);
+            BtnSeleteCancle.TabIndex = 27;
+            BtnSeleteCancle.Text = "선택취소";
+            BtnSeleteCancle.UseVisualStyleBackColor = true;
+            BtnSeleteCancle.Click += BtnSeleteCancle_Click;
+            // 
+            // BtnAllCancle
+            // 
+            BtnAllCancle.Location = new Point(608, 356);
+            BtnAllCancle.Name = "BtnAllCancle";
+            BtnAllCancle.Size = new Size(82, 83);
+            BtnAllCancle.TabIndex = 26;
+            BtnAllCancle.Text = "전체취소";
+            BtnAllCancle.UseVisualStyleBackColor = true;
+            BtnAllCancle.Click += BtnAllCancle_Click;
+            // 
+            // BtnCard
+            // 
+            BtnCard.Location = new Point(432, 355);
+            BtnCard.Name = "BtnCard";
+            BtnCard.Size = new Size(82, 83);
+            BtnCard.TabIndex = 25;
+            BtnCard.Text = "카드결제";
+            BtnCard.UseVisualStyleBackColor = true;
+            BtnCard.Click += BtnCard_Click;
+            // 
+            // BtnCash
+            // 
+            BtnCash.Location = new Point(344, 355);
+            BtnCash.Name = "BtnCash";
+            BtnCash.Size = new Size(82, 83);
+            BtnCash.TabIndex = 24;
+            BtnCash.Text = "현금결제";
+            BtnCash.UseVisualStyleBackColor = true;
+            BtnCash.Click += BtnCash_Click;
+            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -126,12 +179,13 @@
             label5.TabIndex = 23;
             label5.Text = "거스름돈";
             // 
-            // TxtChagePrice
+            // TxtChangePrice
             // 
-            TxtChagePrice.Location = new Point(88, 415);
-            TxtChagePrice.Name = "TxtChagePrice";
-            TxtChagePrice.Size = new Size(105, 23);
-            TxtChagePrice.TabIndex = 22;
+            TxtChangePrice.Location = new Point(88, 415);
+            TxtChangePrice.Name = "TxtChangePrice";
+            TxtChangePrice.ReadOnly = true;
+            TxtChangePrice.Size = new Size(105, 23);
+            TxtChangePrice.TabIndex = 22;
             // 
             // BtnBell7
             // 
@@ -142,6 +196,7 @@
             BtnBell7.TabIndex = 21;
             BtnBell7.Text = "7";
             BtnBell7.UseVisualStyleBackColor = true;
+            BtnBell7.Click += BtnBell7_Click;
             // 
             // BtnBell9
             // 
@@ -152,6 +207,7 @@
             BtnBell9.TabIndex = 20;
             BtnBell9.Text = "9";
             BtnBell9.UseVisualStyleBackColor = true;
+            BtnBell9.Click += BtnBell9_Click;
             // 
             // BtnBell8
             // 
@@ -162,6 +218,7 @@
             BtnBell8.TabIndex = 19;
             BtnBell8.Text = "8";
             BtnBell8.UseVisualStyleBackColor = true;
+            BtnBell8.Click += BtnBell8_Click;
             // 
             // BtnBell4
             // 
@@ -172,6 +229,7 @@
             BtnBell4.TabIndex = 18;
             BtnBell4.Text = "4";
             BtnBell4.UseVisualStyleBackColor = true;
+            BtnBell4.Click += BtnBell4_Click;
             // 
             // BtnBell6
             // 
@@ -182,6 +240,7 @@
             BtnBell6.TabIndex = 17;
             BtnBell6.Text = "6";
             BtnBell6.UseVisualStyleBackColor = true;
+            BtnBell6.Click += BtnBell6_Click;
             // 
             // BtnBell5
             // 
@@ -192,6 +251,7 @@
             BtnBell5.TabIndex = 16;
             BtnBell5.Text = "5";
             BtnBell5.UseVisualStyleBackColor = true;
+            BtnBell5.Click += BtnBell5_Click;
             // 
             // BtnBell1
             // 
@@ -202,6 +262,7 @@
             BtnBell1.TabIndex = 15;
             BtnBell1.Text = "1";
             BtnBell1.UseVisualStyleBackColor = true;
+            BtnBell1.Click += BtnBell1_Click;
             // 
             // BtnBell3
             // 
@@ -212,6 +273,7 @@
             BtnBell3.TabIndex = 14;
             BtnBell3.Text = "3";
             BtnBell3.UseVisualStyleBackColor = true;
+            BtnBell3.Click += BtnBell3_Click;
             // 
             // BtnBell2
             // 
@@ -222,32 +284,37 @@
             BtnBell2.TabIndex = 13;
             BtnBell2.Text = "2";
             BtnBell2.UseVisualStyleBackColor = true;
+            BtnBell2.Click += BtnBell2_Click;
             // 
-            // TxtDrinkSum
+            // TxtCount
             // 
-            TxtDrinkSum.Location = new Point(87, 299);
-            TxtDrinkSum.Name = "TxtDrinkSum";
-            TxtDrinkSum.Size = new Size(106, 23);
-            TxtDrinkSum.TabIndex = 12;
+            TxtCount.Location = new Point(87, 299);
+            TxtCount.Name = "TxtCount";
+            TxtCount.ReadOnly = true;
+            TxtCount.Size = new Size(106, 23);
+            TxtCount.TabIndex = 12;
             // 
-            // TxtDesertSum
+            // TxtTotal
             // 
-            TxtDesertSum.Location = new Point(87, 328);
-            TxtDesertSum.Name = "TxtDesertSum";
-            TxtDesertSum.Size = new Size(105, 23);
-            TxtDesertSum.TabIndex = 11;
+            TxtTotal.Location = new Point(87, 328);
+            TxtTotal.Name = "TxtTotal";
+            TxtTotal.ReadOnly = true;
+            TxtTotal.Size = new Size(105, 23);
+            TxtTotal.TabIndex = 11;
             // 
-            // TxtTotalPrice
+            // TxtPrice
             // 
-            TxtTotalPrice.Location = new Point(88, 357);
-            TxtTotalPrice.Name = "TxtTotalPrice";
-            TxtTotalPrice.Size = new Size(105, 23);
-            TxtTotalPrice.TabIndex = 10;
+            TxtPrice.Location = new Point(88, 357);
+            TxtPrice.Name = "TxtPrice";
+            TxtPrice.ReadOnly = true;
+            TxtPrice.Size = new Size(105, 23);
+            TxtPrice.TabIndex = 10;
             // 
             // TxtRecivePrice
             // 
             TxtRecivePrice.Location = new Point(88, 386);
             TxtRecivePrice.Name = "TxtRecivePrice";
+            TxtRecivePrice.ReadOnly = true;
             TxtRecivePrice.Size = new Size(105, 23);
             TxtRecivePrice.TabIndex = 9;
             // 
@@ -260,6 +327,7 @@
             BtnBell0.TabIndex = 8;
             BtnBell0.Text = "0";
             BtnBell0.UseVisualStyleBackColor = true;
+            BtnBell0.Click += BtnBell0_Click;
             // 
             // BtnBellCE
             // 
@@ -270,6 +338,7 @@
             BtnBellCE.TabIndex = 7;
             BtnBellCE.Text = "CE";
             BtnBellCE.UseVisualStyleBackColor = true;
+            BtnBellCE.Click += BtnBellCE_Click;
             // 
             // BtnBell00
             // 
@@ -280,6 +349,7 @@
             BtnBell00.TabIndex = 6;
             BtnBell00.Text = "00";
             BtnBell00.UseVisualStyleBackColor = true;
+            BtnBell00.Click += BtnBell00_Click;
             // 
             // label4
             // 
@@ -304,18 +374,18 @@
             label2.AutoSize = true;
             label2.Location = new Point(6, 331);
             label2.Name = "label2";
-            label2.Size = new Size(75, 15);
+            label2.Size = new Size(47, 15);
             label2.TabIndex = 3;
-            label2.Text = "총 디저트 수";
+            label2.Text = "총 금액";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Location = new Point(6, 302);
             label1.Name = "label1";
-            label1.Size = new Size(47, 15);
+            label1.Size = new Size(59, 15);
             label1.TabIndex = 2;
-            label1.Text = "총 잔수";
+            label1.Text = "합계 수량";
             // 
             // TbcMenu
             // 
@@ -329,147 +399,270 @@
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(button10);
-            tabPage1.Controls.Add(button11);
-            tabPage1.Controls.Add(button12);
-            tabPage1.Controls.Add(button7);
-            tabPage1.Controls.Add(button8);
-            tabPage1.Controls.Add(button9);
-            tabPage1.Controls.Add(button4);
-            tabPage1.Controls.Add(button5);
-            tabPage1.Controls.Add(button6);
-            tabPage1.Controls.Add(button3);
-            tabPage1.Controls.Add(button2);
-            tabPage1.Controls.Add(button1);
+            tabPage1.Controls.Add(BtnEinspannerIce);
+            tabPage1.Controls.Add(BtnMochaIce);
+            tabPage1.Controls.Add(BtnMochaHot);
+            tabPage1.Controls.Add(BtnEinspannerHot);
+            tabPage1.Controls.Add(BtnVanilaLatteIce);
+            tabPage1.Controls.Add(BtnVanilaLatteHot);
+            tabPage1.Controls.Add(BtnCappuccinoHot);
+            tabPage1.Controls.Add(BtnLatteIce);
+            tabPage1.Controls.Add(BtnLatteHot);
+            tabPage1.Controls.Add(BtnEspresso);
+            tabPage1.Controls.Add(BtnAmericanoIce);
+            tabPage1.Controls.Add(BtnAmericanoHot);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(348, 304);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "tabPage1";
+            tabPage1.Text = "COFFEE";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // BtnEinspannerIce
             // 
-            button10.Location = new Point(247, 244);
-            button10.Name = "button10";
-            button10.Size = new Size(97, 54);
-            button10.TabIndex = 11;
-            button10.Text = "button10";
-            button10.UseVisualStyleBackColor = true;
+            BtnEinspannerIce.Location = new Point(247, 244);
+            BtnEinspannerIce.Name = "BtnEinspannerIce";
+            BtnEinspannerIce.Size = new Size(97, 54);
+            BtnEinspannerIce.TabIndex = 11;
+            BtnEinspannerIce.Text = "아인슈페너(ICE)";
+            BtnEinspannerIce.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // BtnMochaIce
             // 
-            button11.Location = new Point(126, 244);
-            button11.Name = "button11";
-            button11.Size = new Size(97, 54);
-            button11.TabIndex = 10;
-            button11.Text = "button11";
-            button11.UseVisualStyleBackColor = true;
+            BtnMochaIce.Location = new Point(126, 244);
+            BtnMochaIce.Name = "BtnMochaIce";
+            BtnMochaIce.Size = new Size(97, 54);
+            BtnMochaIce.TabIndex = 10;
+            BtnMochaIce.Text = "카페모카   (ICE)";
+            BtnMochaIce.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // BtnMochaHot
             // 
-            button12.Location = new Point(5, 244);
-            button12.Name = "button12";
-            button12.Size = new Size(97, 54);
-            button12.TabIndex = 9;
-            button12.Text = "button12";
-            button12.UseVisualStyleBackColor = true;
+            BtnMochaHot.Location = new Point(5, 244);
+            BtnMochaHot.Name = "BtnMochaHot";
+            BtnMochaHot.Size = new Size(97, 54);
+            BtnMochaHot.TabIndex = 9;
+            BtnMochaHot.Text = "카페모카  (HOT)";
+            BtnMochaHot.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // BtnEinspannerHot
             // 
-            button7.Location = new Point(248, 165);
-            button7.Name = "button7";
-            button7.Size = new Size(97, 54);
-            button7.TabIndex = 8;
-            button7.Text = "button7";
-            button7.UseVisualStyleBackColor = true;
+            BtnEinspannerHot.Location = new Point(248, 165);
+            BtnEinspannerHot.Name = "BtnEinspannerHot";
+            BtnEinspannerHot.Size = new Size(97, 54);
+            BtnEinspannerHot.TabIndex = 8;
+            BtnEinspannerHot.Text = "아인슈페너(HOT)";
+            BtnEinspannerHot.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // BtnVanilaLatteIce
             // 
-            button8.Location = new Point(127, 165);
-            button8.Name = "button8";
-            button8.Size = new Size(97, 54);
-            button8.TabIndex = 7;
-            button8.Text = "button8";
-            button8.UseVisualStyleBackColor = true;
+            BtnVanilaLatteIce.Location = new Point(127, 165);
+            BtnVanilaLatteIce.Name = "BtnVanilaLatteIce";
+            BtnVanilaLatteIce.Size = new Size(97, 54);
+            BtnVanilaLatteIce.TabIndex = 7;
+            BtnVanilaLatteIce.Text = "바닐라라떼(ICE)";
+            BtnVanilaLatteIce.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // BtnVanilaLatteHot
             // 
-            button9.Location = new Point(6, 165);
-            button9.Name = "button9";
-            button9.Size = new Size(97, 54);
-            button9.TabIndex = 6;
-            button9.Text = "button9";
-            button9.UseVisualStyleBackColor = true;
+            BtnVanilaLatteHot.Location = new Point(6, 165);
+            BtnVanilaLatteHot.Name = "BtnVanilaLatteHot";
+            BtnVanilaLatteHot.Size = new Size(97, 54);
+            BtnVanilaLatteHot.TabIndex = 6;
+            BtnVanilaLatteHot.Text = "바닐라라떼(HOT)";
+            BtnVanilaLatteHot.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // BtnCappuccinoHot
             // 
-            button4.Location = new Point(247, 84);
-            button4.Name = "button4";
-            button4.Size = new Size(97, 54);
-            button4.TabIndex = 5;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            BtnCappuccinoHot.Location = new Point(247, 84);
+            BtnCappuccinoHot.Name = "BtnCappuccinoHot";
+            BtnCappuccinoHot.Size = new Size(97, 54);
+            BtnCappuccinoHot.TabIndex = 5;
+            BtnCappuccinoHot.Text = "카푸치노  (HOT)";
+            BtnCappuccinoHot.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // BtnLatteIce
             // 
-            button5.Location = new Point(126, 84);
-            button5.Name = "button5";
-            button5.Size = new Size(97, 54);
-            button5.TabIndex = 4;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
+            BtnLatteIce.Location = new Point(126, 84);
+            BtnLatteIce.Name = "BtnLatteIce";
+            BtnLatteIce.Size = new Size(97, 54);
+            BtnLatteIce.TabIndex = 4;
+            BtnLatteIce.Text = "카페라떼   (ICE)";
+            BtnLatteIce.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // BtnLatteHot
             // 
-            button6.Location = new Point(5, 84);
-            button6.Name = "button6";
-            button6.Size = new Size(97, 54);
-            button6.TabIndex = 3;
-            button6.Text = "button6";
-            button6.UseVisualStyleBackColor = true;
+            BtnLatteHot.Location = new Point(5, 84);
+            BtnLatteHot.Name = "BtnLatteHot";
+            BtnLatteHot.Size = new Size(97, 54);
+            BtnLatteHot.TabIndex = 3;
+            BtnLatteHot.Text = "카페라떼  (HOT)";
+            BtnLatteHot.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BtnEspresso
             // 
-            button3.Location = new Point(248, 6);
-            button3.Name = "button3";
-            button3.Size = new Size(97, 54);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            BtnEspresso.Location = new Point(248, 6);
+            BtnEspresso.Name = "BtnEspresso";
+            BtnEspresso.Size = new Size(97, 54);
+            BtnEspresso.TabIndex = 2;
+            BtnEspresso.Text = "에스프레소(HOT)";
+            BtnEspresso.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnAmericanoIce
             // 
-            button2.Location = new Point(127, 6);
-            button2.Name = "button2";
-            button2.Size = new Size(97, 54);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            BtnAmericanoIce.Location = new Point(127, 6);
+            BtnAmericanoIce.Name = "BtnAmericanoIce";
+            BtnAmericanoIce.Size = new Size(97, 54);
+            BtnAmericanoIce.TabIndex = 1;
+            BtnAmericanoIce.Text = "아메리카노(ICE)";
+            BtnAmericanoIce.UseVisualStyleBackColor = true;
+            BtnAmericanoIce.Click += BtnAmericanoIce_Click;
             // 
-            // button1
+            // BtnAmericanoHot
             // 
-            button1.Location = new Point(6, 6);
-            button1.Name = "button1";
-            button1.Size = new Size(97, 54);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            BtnAmericanoHot.Location = new Point(6, 6);
+            BtnAmericanoHot.Name = "BtnAmericanoHot";
+            BtnAmericanoHot.Size = new Size(97, 54);
+            BtnAmericanoHot.TabIndex = 0;
+            BtnAmericanoHot.Text = "아메리카노(HOT)";
+            BtnAmericanoHot.UseVisualStyleBackColor = true;
+            BtnAmericanoHot.Click += BtnAmericanoHot_Click;
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(button17);
+            tabPage2.Controls.Add(button18);
+            tabPage2.Controls.Add(button19);
+            tabPage2.Controls.Add(button20);
+            tabPage2.Controls.Add(button21);
+            tabPage2.Controls.Add(button22);
+            tabPage2.Controls.Add(button23);
+            tabPage2.Controls.Add(button24);
+            tabPage2.Controls.Add(button25);
+            tabPage2.Controls.Add(button26);
+            tabPage2.Controls.Add(button27);
+            tabPage2.Controls.Add(button28);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(348, 304);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "BEVERAGE";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            button17.Location = new Point(246, 244);
+            button17.Name = "button17";
+            button17.Size = new Size(97, 54);
+            button17.TabIndex = 23;
+            button17.Text = "button17";
+            button17.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            button18.Location = new Point(125, 244);
+            button18.Name = "button18";
+            button18.Size = new Size(97, 54);
+            button18.TabIndex = 22;
+            button18.Text = "button18";
+            button18.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            button19.Location = new Point(4, 244);
+            button19.Name = "button19";
+            button19.Size = new Size(97, 54);
+            button19.TabIndex = 21;
+            button19.Text = "button19";
+            button19.UseVisualStyleBackColor = true;
+            // 
+            // button20
+            // 
+            button20.Location = new Point(247, 165);
+            button20.Name = "button20";
+            button20.Size = new Size(97, 54);
+            button20.TabIndex = 20;
+            button20.Text = "button20";
+            button20.UseVisualStyleBackColor = true;
+            // 
+            // button21
+            // 
+            button21.Location = new Point(126, 165);
+            button21.Name = "button21";
+            button21.Size = new Size(97, 54);
+            button21.TabIndex = 19;
+            button21.Text = "button21";
+            button21.UseVisualStyleBackColor = true;
+            // 
+            // button22
+            // 
+            button22.Location = new Point(5, 165);
+            button22.Name = "button22";
+            button22.Size = new Size(97, 54);
+            button22.TabIndex = 18;
+            button22.Text = "button22";
+            button22.UseVisualStyleBackColor = true;
+            // 
+            // button23
+            // 
+            button23.Location = new Point(246, 84);
+            button23.Name = "button23";
+            button23.Size = new Size(97, 54);
+            button23.TabIndex = 17;
+            button23.Text = "button23";
+            button23.UseVisualStyleBackColor = true;
+            // 
+            // button24
+            // 
+            button24.Location = new Point(125, 84);
+            button24.Name = "button24";
+            button24.Size = new Size(97, 54);
+            button24.TabIndex = 16;
+            button24.Text = "button24";
+            button24.UseVisualStyleBackColor = true;
+            // 
+            // button25
+            // 
+            button25.Location = new Point(4, 84);
+            button25.Name = "button25";
+            button25.Size = new Size(97, 54);
+            button25.TabIndex = 15;
+            button25.Text = "button25";
+            button25.UseVisualStyleBackColor = true;
+            // 
+            // button26
+            // 
+            button26.Location = new Point(247, 6);
+            button26.Name = "button26";
+            button26.Size = new Size(97, 54);
+            button26.TabIndex = 14;
+            button26.Text = "button26";
+            button26.UseVisualStyleBackColor = true;
+            // 
+            // button27
+            // 
+            button27.Location = new Point(126, 6);
+            button27.Name = "button27";
+            button27.Size = new Size(97, 54);
+            button27.TabIndex = 13;
+            button27.Text = "button27";
+            button27.UseVisualStyleBackColor = true;
+            // 
+            // button28
+            // 
+            button28.Location = new Point(5, 6);
+            button28.Name = "button28";
+            button28.Size = new Size(97, 54);
+            button28.TabIndex = 12;
+            button28.Text = "button28";
+            button28.UseVisualStyleBackColor = true;
             // 
             // LsvOrder
             // 
             LsvOrder.Columns.AddRange(new ColumnHeader[] { ClhTitle, ClhCount, ClhPrice, ClhEtc });
+            LsvOrder.GridLines = true;
             LsvOrder.Location = new Point(6, 22);
             LsvOrder.Name = "LsvOrder";
             LsvOrder.Size = new Size(322, 267);
@@ -494,42 +687,6 @@
             // 
             ClhEtc.Text = "비고";
             // 
-            // button13
-            // 
-            button13.Location = new Point(344, 355);
-            button13.Name = "button13";
-            button13.Size = new Size(82, 83);
-            button13.TabIndex = 24;
-            button13.Text = "button13";
-            button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            button14.Location = new Point(432, 355);
-            button14.Name = "button14";
-            button14.Size = new Size(82, 83);
-            button14.TabIndex = 25;
-            button14.Text = "button14";
-            button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            button15.Location = new Point(608, 356);
-            button15.Name = "button15";
-            button15.Size = new Size(82, 83);
-            button15.TabIndex = 26;
-            button15.Text = "button15";
-            button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            button16.Location = new Point(520, 356);
-            button16.Name = "button16";
-            button16.Size = new Size(82, 83);
-            button16.TabIndex = 27;
-            button16.Text = "button16";
-            button16.UseVisualStyleBackColor = true;
-            // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -542,6 +699,7 @@
             groupBox1.PerformLayout();
             TbcMenu.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -550,20 +708,20 @@
         private GroupBox groupBox1;
         private TabControl TbcMenu;
         private TabPage tabPage1;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button BtnEspresso;
+        private Button BtnAmericanoIce;
+        private Button BtnAmericanoHot;
         private TabPage tabPage2;
         private ListView LsvOrder;
-        private Button button10;
-        private Button button11;
-        private Button button12;
-        private Button button7;
-        private Button button8;
-        private Button button9;
-        private Button button4;
-        private Button button5;
-        private Button button6;
+        private Button BtnEinspannerIce;
+        private Button BtnMochaIce;
+        private Button BtnMochaHot;
+        private Button BtnEinspannerHot;
+        private Button BtnVanilaLatteIce;
+        private Button BtnVanilaLatteHot;
+        private Button BtnCappuccinoHot;
+        private Button BtnLatteIce;
+        private Button BtnLatteHot;
         private ColumnHeader ClhTitle;
         private ColumnHeader ClhCount;
         private ColumnHeader ClhPrice;
@@ -581,18 +739,30 @@
         private Button BtnBell1;
         private Button BtnBell3;
         private Button BtnBell2;
-        private TextBox TxtDrinkSum;
-        private TextBox TxtDesertSum;
-        private TextBox TxtTotalPrice;
+        private TextBox TxtCount;
+        private TextBox TxtTotal;
+        private TextBox TxtPrice;
         private TextBox TxtRecivePrice;
         private Button BtnBell0;
         private Button BtnBellCE;
         private Button BtnBell00;
         private Label label5;
-        private TextBox TxtChagePrice;
-        private Button button16;
-        private Button button15;
-        private Button button14;
-        private Button button13;
+        private TextBox TxtChangePrice;
+        private Button BtnSeleteCancle;
+        private Button BtnAllCancle;
+        private Button BtnCard;
+        private Button BtnCash;
+        private Button button17;
+        private Button button18;
+        private Button button19;
+        private Button button20;
+        private Button button21;
+        private Button button22;
+        private Button button23;
+        private Button button24;
+        private Button button25;
+        private Button button26;
+        private Button button27;
+        private Button button28;
     }
 }
