@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             groupBox1 = new GroupBox();
+            label6 = new Label();
+            labelTime = new Label();
             BtnSeleteCancle = new Button();
             BtnAllCancle = new Button();
             BtnCard = new Button();
@@ -87,6 +90,7 @@
             ClhCount = new ColumnHeader();
             ClhPrice = new ColumnHeader();
             ClhEtc = new ColumnHeader();
+            timer = new System.Windows.Forms.Timer(components);
             groupBox1.SuspendLayout();
             TbcMenu.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -95,6 +99,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(labelTime);
             groupBox1.Controls.Add(BtnSeleteCancle);
             groupBox1.Controls.Add(BtnAllCancle);
             groupBox1.Controls.Add(BtnCard);
@@ -129,6 +135,24 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "주문관리";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(499, 19);
+            label6.Name = "label6";
+            label6.Size = new Size(50, 15);
+            label6.TabIndex = 29;
+            label6.Text = "영업일 :";
+            // 
+            // labelTime
+            // 
+            labelTime.AutoSize = true;
+            labelTime.Location = new Point(555, 19);
+            labelTime.Name = "labelTime";
+            labelTime.Size = new Size(31, 15);
+            labelTime.TabIndex = 28;
+            labelTime.Text = "날짜";
             // 
             // BtnSeleteCancle
             // 
@@ -687,6 +711,12 @@
             // 
             ClhEtc.Text = "비고";
             // 
+            // timer
+            // 
+            timer.Enabled = true;
+            timer.Interval = 1000;
+            timer.Tick += timer_Tick;
+            // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -764,5 +794,8 @@
         private Button button26;
         private Button button27;
         private Button button28;
+        private System.Windows.Forms.Timer timer;
+        private Label labelTime;
+        private Label label6;
     }
 }

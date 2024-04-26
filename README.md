@@ -364,7 +364,8 @@
     - 국가교통정보센터 CCTV뷰 앱(OpenAPI, NuGet dll, Network)
 
 ## 개인 토이 프로젝트
-- 제목
-    - 기능
-    - 특징
-    - 배운점
+- 카페 포스기 with SQL Server(DB)
+    - 메뉴 주문
+        - 데이터베이스 연동 : 판매된 메뉴, 개수, 층 금액, 판매된 날짜 등등
+
+    ![데이터베이스 다이어그램](https://github.com/breadcoffee/basic-csharp-2024/blob/main/images/cs007.png)
