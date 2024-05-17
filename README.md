@@ -366,6 +366,16 @@
 ## 개인 토이 프로젝트
 - 카페 포스기 with SQL Server(DB)
     - 메뉴 주문
-        - 데이터베이스 연동 : 판매된 메뉴, 개수, 층 금액, 판매된 날짜 등등
+        - 음료 버튼 클릭시 개수 및 금액 증가
+        - 추후 BEVERAGE 항목추가
 
-    ![데이터베이스 다이어그램](https://github.com/breadcoffee/basic-csharp-2024/blob/main/images/cs007.png)
+        ![카페포스기 화면](https://github.com/breadcoffee/basic-csharp-2024/blob/main/images/cs008.png)
+    
+    - 계산기버튼
+        - 현금 결제시 받은 금액과 거스름돈 계산
+
+    - 결제버튼
+        - 현금 및 카드 결제 후 데이터베이스에 저장
+        - 데이터베이스 연동 : 판매된 메뉴, 개수, 총 금액, 판매된 날짜 등등
+        
+        ![데이터베이스 다이어그램](https://github.com/breadcoffee/basic-csharp-2024/blob/main/images/cs007.png)
